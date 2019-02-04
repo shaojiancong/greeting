@@ -27,7 +27,7 @@
 			background-position: 50% 50%;
 			background-size: 100% 100%;
 			animation: myfirst 1.5s;
-			animation-delay: 2s;
+			animation-delay: 4s;
 			z-index: 999999;
 		}
 		.second{
@@ -35,7 +35,7 @@
 			background-position: 50% 50%;
 			background-size: 100% 100%;
 			animation: myfirst 1.5s;
-			animation-delay: 3.5s;
+			animation-delay: 5.5s;
 			z-index: 99999;
 		}
 		.third{
@@ -43,7 +43,7 @@
 			background-position: 50% 50%;
 			background-size: 100% 100%;
 			animation: mysecond 1.5s;
-			animation-delay: 5s;
+			animation-delay: 7s;
 			z-index: 9999;
 		}
 		.forth{
@@ -51,7 +51,7 @@
 			background-position: 50% 50%;
 			background-size: 100% 100%;
 			animation: mythird 1.5s;
-			animation-delay: 6.5s;
+			animation-delay: 8.5s;
 			z-index: 999;
 		}
 		.fifth{
@@ -59,7 +59,7 @@
 			background-position: 50% 50%;
 			background-size: 100% 100%;
 			animation: myforth 1.5s;
-			animation-delay: 8s;
+			animation-delay: 10s;
 			z-index: 99;
 		}
 		@keyframes myforth
@@ -91,6 +91,15 @@
 			z-index: 1;
 			bottom: 0;
 		}
+		.load{
+			position: absolute;
+			z-index: 9999999999;
+			height: 100%;
+			width: 100%;
+			top: 0;
+			font-size: 16px;
+			background: #fff;
+		}
 	</style>
 </head>
 <body style="margin: 0px; padding: 0px; font-size: 0px">
@@ -101,24 +110,28 @@
 	<div class="picDiv forth"></div>
 	<div class="picDiv fifth"></div>
 	<canvas id="mycanvas"></canvas>
+	<div class="load">loading...</div>
 </body>
 <script type="text/javascript">
 	window.onload = function(){
 		setTimeout(function(){
+			document.querySelector('.load').style.display="none";
+		},2000);
+		setTimeout(function(){
 			document.querySelector('.first').style.display="none";
-		},3400);
+		},5400);
 		setTimeout(function(){
 			document.querySelector('.second').style.display="none";
-		},4900);
+		},6900);
 		setTimeout(function(){
 			document.querySelector('.third').style.display="none";
-		},6400);
+		},8400);
 		setTimeout(function(){
 			document.querySelector('.forth').style.display="none";
-		},7900);
+		},9900);
 		setTimeout(function(){
 			document.querySelector('.fifth').style.display="none";
-		},9400);
+		},11400);
 	}
 	
 </script>
